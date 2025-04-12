@@ -1,2 +1,3 @@
 .venv/
-fusion_results/*.jpg
+fusion_results/*.png
+.DS_Store
