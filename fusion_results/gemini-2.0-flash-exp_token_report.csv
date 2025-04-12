@@ -1,0 +1,37 @@
+cat_image,cat_format,cat_resolution,style_image,count_tokens,actual_tokens,text_tokens,image_tokens,output_tokens,status,output_image
+cat_640*440,png,640x440,style_a.jpg,526.0,526.0,10.0,516.0,0.0,success,fusion_results/cat_640*440_style_a_0.png
+cat_640*440,png,640x440,style_b.jpg,526.0,526.0,10.0,516.0,0.0,success,fusion_results/cat_640*440_style_b_0.png
+cat_640*440,png,640x440,style_c.jpg,526.0,526.0,10.0,516.0,0.0,success,fusion_results/cat_640*440_style_c_0.png
+cat_640*440,jpg,640x440,style_a.jpg,526.0,526.0,10.0,516.0,0.0,success,fusion_results/cat_640*440_style_a_0.png
+cat_640*440,jpg,640x440,style_b.jpg,526.0,526.0,10.0,516.0,0.0,success,fusion_results/cat_640*440_style_b_0.png
+cat_640*440,jpg,640x440,style_c.jpg,526.0,526.0,10.0,516.0,0.0,success,fusion_results/cat_640*440_style_c_0.png
+cat_640*440,webp,640x440,style_a.jpg,526.0,526.0,10.0,516.0,0.0,success,fusion_results/cat_640*440_style_a_0.png
+cat_640*440,webp,640x440,style_b.jpg,526.0,526.0,10.0,516.0,0.0,success,fusion_results/cat_640*440_style_b_0.png
+cat_640*440,webp,640x440,style_c.jpg,526.0,526.0,10.0,516.0,0.0,success,fusion_results/cat_640*440_style_c_0.png
+cat_1920*1321,png,1920x1321,style_a.jpg,526.0,526.0,10.0,516.0,0.0,success,fusion_results/cat_1920*1321_style_a_0.png
+cat_1920*1321,png,1920x1321,style_b.jpg,526.0,526.0,10.0,516.0,0.0,success,fusion_results/cat_1920*1321_style_b_0.png
+cat_1920*1321,png,1920x1321,style_c.jpg,526.0,526.0,10.0,516.0,0.0,success,fusion_results/cat_1920*1321_style_c_0.png
+cat_1920*1321,jpg,1920x1321,style_a.jpg,526.0,526.0,10.0,516.0,0.0,success,fusion_results/cat_1920*1321_style_a_0.png
+cat_1920*1321,jpg,1920x1321,style_b.jpg,526.0,526.0,10.0,516.0,0.0,success,fusion_results/cat_1920*1321_style_b_0.png
+cat_1920*1321,jpg,1920x1321,style_c.jpg,526.0,526.0,10.0,516.0,0.0,success,fusion_results/cat_1920*1321_style_c_0.png
+cat_1920*1321,webp,1920x1321,style_a.jpg,526.0,526.0,10.0,516.0,0.0,success,fusion_results/cat_1920*1321_style_a_0.png
+cat_1920*1321,webp,1920x1321,style_b.jpg,526.0,526.0,10.0,516.0,0.0,success,fusion_results/cat_1920*1321_style_b_0.png
+cat_1920*1321,webp,1920x1321,style_c.jpg,526.0,526.0,10.0,516.0,0.0,success,fusion_results/cat_1920*1321_style_c_0.png
+cat_2400*1651,png,2400x1651,style_a.jpg,526.0,526.0,10.0,516.0,0.0,success,fusion_results/cat_2400*1651_style_a_0.png
+cat_2400*1651,png,2400x1651,style_b.jpg,526.0,526.0,10.0,516.0,0.0,success,fusion_results/cat_2400*1651_style_b_0.png
+cat_2400*1651,png,2400x1651,style_c.jpg,526.0,526.0,10.0,516.0,0.0,success,fusion_results/cat_2400*1651_style_c_0.png
+cat_2400*1651,jpg,2400x1651,style_a.jpg,526.0,526.0,10.0,516.0,0.0,success,fusion_results/cat_2400*1651_style_a_0.png
+cat_2400*1651,jpg,2400x1651,style_b.jpg,526.0,526.0,10.0,516.0,0.0,success,fusion_results/cat_2400*1651_style_b_0.png
+cat_2400*1651,jpg,2400x1651,style_c.jpg,526.0,526.0,10.0,516.0,0.0,success,fusion_results/cat_2400*1651_style_c_0.png
+cat_2400*1651,webp,2400x1651,style_a.jpg,526.0,526.0,10.0,516.0,0.0,success,fusion_results/cat_2400*1651_style_a_0.png
+cat_2400*1651,webp,2400x1651,style_b.jpg,526.0,526.0,10.0,516.0,0.0,success,fusion_results/cat_2400*1651_style_b_0.png
+cat_2400*1651,webp,2400x1651,style_c.jpg,526.0,526.0,10.0,516.0,0.0,success,fusion_results/cat_2400*1651_style_c_0.png
+cat_5026*3458,png,5026x3458,style_a.jpg,,,,,,"failed: 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'Deadline expired before operation could complete.', 'status': 'UNAVAILABLE'}}",
+cat_5026*3458,png,5026x3458,style_b.jpg,,,,,,"failed: 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'Deadline expired before operation could complete.', 'status': 'UNAVAILABLE'}}",
+cat_5026*3458,png,5026x3458,style_c.jpg,,,,,,"failed: 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'Deadline expired before operation could complete.', 'status': 'UNAVAILABLE'}}",
+cat_5026*3458,jpg,5026x3458,style_a.jpg,526.0,526.0,10.0,516.0,0.0,success,fusion_results/cat_5026*3458_style_a_0.png
+cat_5026*3458,jpg,5026x3458,style_b.jpg,526.0,526.0,10.0,516.0,0.0,success,fusion_results/cat_5026*3458_style_b_0.png
+cat_5026*3458,jpg,5026x3458,style_c.jpg,526.0,526.0,10.0,516.0,0.0,success,fusion_results/cat_5026*3458_style_c_0.png
+cat_5026*3458,webp,5026x3458,style_a.jpg,526.0,526.0,10.0,516.0,0.0,success,fusion_results/cat_5026*3458_style_a_0.png
+cat_5026*3458,webp,5026x3458,style_b.jpg,526.0,526.0,10.0,516.0,0.0,success,fusion_results/cat_5026*3458_style_b_0.png
+cat_5026*3458,webp,5026x3458,style_c.jpg,526.0,526.0,10.0,516.0,0.0,success,fusion_results/cat_5026*3458_style_c_0.png
