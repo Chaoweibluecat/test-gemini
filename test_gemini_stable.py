@@ -17,8 +17,8 @@ cat_images = [
     {"name": "cat_5026*3458", "res": (5026, 3458), "formats": ["png", "jpg", "webp"]}
 ]
 
-style_images = ["style_a.jpg", "style_b.jpg", "style_c.jpg"]
-output_dir = "fusion_results"
+style_images = ["style_a.jpg"]
+output_dir = "two_pic_text_outputs"
 os.makedirs(output_dir, exist_ok=True)
 
 # 结果存储
@@ -56,37 +56,51 @@ def run_model(model_name) :
                     
                 print(f"\nProcessing: {cat_path} + {style_path}")
                 
-                # 1. 先计算Token
-                cat_file = client.files.upload(file=cat_path)
-                style_file = client.files.upload(file=style_path)
-                
-                count_response = client.models.count_tokens(
-                    model=model_name,
-                    contents=["Tell me about these two pics", cat_file, style_file]
-                )
-                
-                # 2. 实际生成
-                response = generate_with_retry(
-                    "Tell me about these two pics",
-                    [Image.open(cat_path), Image.open(style_path)], model_name=model_name
-                )
-                
-                # 3. 记录结果
-                usage = response.usage_metadata
-                result = {
-                    "cat_image": cat['name'],
-                    "cat_format": fmt,
-                    "cat_resolution": f"{cat['res'][0]}x{cat['res'][1]}",
-                    "style_image": style,
-                    "count_tokens": count_response.total_tokens,
-                    "actual_tokens": usage.prompt_token_count,
-                    "text_tokens": next(m.token_count for m in usage.prompt_tokens_details if m.modality.name == "TEXT"),
-                    "image_tokens": next(m.token_count for m in usage.prompt_tokens_details if m.modality.name == "IMAGE"),
-                    "output_tokens": usage.candidates_token_count or 0,
-                    "status": "success"
-                }
-                results.append(result)
-                
+                try:
+                    # 1. 先计算Token
+                    cat_file = client.files.upload(file=cat_path)
+                    style_file = client.files.upload(file=style_path)
+                    
+                    count_response = client.models.count_tokens(
+                        model=model_name,
+                        contents=["Tell me about these two pics", cat_file, style_file]
+                    )
+                    
+                    # 2. 实际生成
+                    response = generate_with_retry(
+                        "Tell me about these two pics",
+                        [Image.open(cat_path), Image.open(style_path)], model_name=model_name
+                    )
+                    
+                    # 3. 记录结果
+                    usage = response.usage_metadata
+                    result = {
+                        "cat_image": cat['name'],
+                        "cat_format": fmt,
+                        "cat_resolution": f"{cat['res'][0]}x{cat['res'][1]}",
+                        "style_image": style,
+                        "count_tokens": count_response.total_tokens,
+                        "actual_tokens": usage.prompt_token_count,
+                        "text_tokens": next(m.token_count for m in usage.prompt_tokens_details if m.modality.name == "TEXT"),
+                        "image_tokens": next(m.token_count for m in usage.prompt_tokens_details if m.modality.name == "IMAGE"),
+                        "output_tokens": usage.candidates_token_count or 0,
+                        "status": "success"
+                    }                    
+                    results.append(result)
+                    
+                except Exception as e:
+                    print(f"Error processing {cat_path} + {style_path}: {str(e)}")
+                    results.append({
+                        "cat_image": cat['name'],
+                        "cat_format": fmt,
+                        "cat_resolution": f"{cat['res'][0]}x{cat['res'][1]}",
+                        "style_image": style,
+                        "status": f"failed: {str(e)}"
+                    })
+                finally:
+                    # 添加延迟避免速率限制
+                    time.sleep(1)
+
     # 生成结果表格
     df = pd.DataFrame(results)
     report_path = os.path.join(output_dir, f"{model_name}_token_report.csv")
@@ -95,5 +109,5 @@ def run_model(model_name) :
     print(f"\n测试完成！结果已保存到: {report_path}")
     print(df[['cat_image', 'cat_format', 'style_image', 'count_tokens', 'actual_tokens', 'status']])
 
-for m in ["gemini-2.0-flash"] :
+for m in ["gemini-2.0-flash-exp", "gemini-2.0-flash", "gemini-1.5-flash"] :
     run_model(m)
