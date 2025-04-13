@@ -1,0 +1,12 @@
+image_name,image_format,image_resolution,count_tokens,actual_tokens,text_tokens,image_tokens,output_tokens,status
+cat_640*440,png,640x440,262,1809,3,1806,114,success
+cat_640*440,jpg,640x440,262,1809,3,1806,111,success
+cat_640*440,webp,640x440,262,1809,3,1806,110,success
+cat_1920*1321,png,1920x1321,262,1809,3,1806,189,success
+cat_1920*1321,jpg,1920x1321,262,1809,3,1806,132,success
+cat_1920*1321,webp,1920x1321,262,1809,3,1806,154,success
+cat_2400*1651,png,2400x1651,262,3357,3,3354,138,success
+cat_2400*1651,jpg,2400x1651,262,3357,3,3354,153,success
+cat_2400*1651,webp,2400x1651,262,3357,3,3354,177,success
+cat_5026*3458,jpg,5026x3458,262,3357,3,3354,212,success
+cat_5026*3458,webp,5026x3458,262,3357,3,3354,114,success

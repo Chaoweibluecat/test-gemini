@@ -1,0 +1,13 @@
+cat_image,cat_format,cat_resolution,style_image,count_tokens,actual_tokens,text_tokens,image_tokens,output_tokens,status
+cat_640*440,png,640x440,style_a.jpg,523,522,6,516,289,success
+cat_640*440,jpg,640x440,style_a.jpg,523,522,6,516,239,success
+cat_640*440,webp,640x440,style_a.jpg,523,522,6,516,280,success
+cat_1920*1321,png,1920x1321,style_a.jpg,523,522,6,516,235,success
+cat_1920*1321,jpg,1920x1321,style_a.jpg,523,522,6,516,216,success
+cat_1920*1321,webp,1920x1321,style_a.jpg,523,522,6,516,190,success
+cat_2400*1651,png,2400x1651,style_a.jpg,523,522,6,516,316,success
+cat_2400*1651,jpg,2400x1651,style_a.jpg,523,522,6,516,167,success
+cat_2400*1651,webp,2400x1651,style_a.jpg,523,522,6,516,250,success
+cat_5026*3458,png,5026x3458,style_a.jpg,523,522,6,516,164,success
+cat_5026*3458,jpg,5026x3458,style_a.jpg,523,522,6,516,192,success
+cat_5026*3458,webp,5026x3458,style_a.jpg,523,522,6,516,272,success
